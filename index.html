@@ -1,1 +1,23 @@
-hello world
+<!DOCTYPE html>
+<html>
+  <body>
+    <textarea id="text-input" oninput="this.editor.update()"
+              rows="6" cols="60">Type **Markdown** here.</textarea>
+    <div id="preview"> </div>
+    <script src="markdown.js"></script>
+    <script>
+      function Editor(input, preview) {
+        this.update = function () {
+           var tree = markdown.parse( input.value );
+           // clone = clone_array( tree );
+
+          preview.innerHTML = markdown.toHTML(tree);
+        };
+        input.editor = this;
+        this.update();
+      }
+      var $ = function (id) { return document.getElementById(id); };
+      new Editor($("text-input"), $("preview"));
+    </script>
+  </body>
+</html>
