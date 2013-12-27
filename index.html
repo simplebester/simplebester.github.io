@@ -5,19 +5,18 @@
               rows="6" cols="60">Type **Markdown** here.</textarea>
     <div id="preview"> </div>
     <script src="markdown.js"></script>
+    <script src="jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
     <script>
-      function Editor(input, preview) {
-        this.update = function () {
-           var tree = markdown.parse( input.value );
-           // clone = clone_array( tree );
 
-          preview.innerHTML = markdown.toHTML(tree);
-        };
-        input.editor = this;
-        this.update();
-      }
-      var $ = function (id) { return document.getElementById(id); };
-      new Editor($("text-input"), $("preview"));
+$(document).ready(function(){
+$.get("index.md", {}, function (data, textStatus){
+ var tree = markdown.parse( data );
+preview.innerHTML = markdown.toHTML(tree);
+
+			//	alert(data);
+		});
+        });
+
     </script>
   </body>
 </html>
