@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <textarea id="text-input" oninput="this.editor.update()"
+              rows="6" cols="60">Type **Markdown** here.</textarea>
+    <div id="preview"> </div>
+    <script src="markdown.js"></script>
+    <script src="jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+$(document).ready(function(){
+
+         //  (function ($) {
+           //     $.getUrlParam = function (name) {
+           //         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+           //         var r = window.location.search.substr(1).match(reg);
+           //         if (r != null) return unescape(r[2]); return null;
+          //      }
+        //    })(jQuery);
+
+       // var currid = $.getUrlParam("id");
+       // if(currid == "") currid = "index.md"
+       $("#preview a").click(function(){
+           var currid = $(this).attr("href");
+       $.get(currid, {}, function (data, textStatus){
+ var tree = markdown.parse( data );
+preview.innerHTML = markdown.toHTML(tree);
+
+			//	alert(data);
+		});
+    
+           
+           });
+$.get("index.md", {}, function (data, textStatus){
+ var tree = markdown.parse( data );
+preview.innerHTML = markdown.toHTML(tree);
+
+			//	alert(data);
+		});
+        });
+
+    </script>
+  </body>
+</html>
