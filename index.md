@@ -2,7 +2,7 @@
 ## life
 [car](#car.md) [film](#film.md) [passwd](#passwd.md)
 ## phone game
-[cocos2d-x](#cocos2d-x.md) [cocosbuilder](#cocosbuilder.md)
+[cocos2d-x](#cocos2d-x.md) [cocosbuilder](#cocosbuilder.md) [cocostudio](#cocostudio.md)
 ## web app
 [jquery](#jquery.md) [xerp](#xerp.md)
 ## linux

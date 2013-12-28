@@ -1,7 +1,35 @@
 <!DOCTYPE html>
 <html>
+<style type="text/css" media="screen">
+body{
+margin-left:20%;
+margin-right:20%;
+max-width:800px;
+}
+    a:link {color:#0000FF;}		/* 未被访问的链接 */
+a:visited {color:#0000FF;}	/* 已被访问的链接 */
+a:hover {color:#0000FF;}	/* 鼠标指针移动到链接上 */
+a:active {color:#0000FF;}	/* 正在被点击的链接 */
+ul
+{
+//    display: inline;
+}
+code
+{
+background: #E4F0EF;
+display: block;
+}
+h2{
+margin-bottom: 5px;
+margin-top: 7px;
+
+}
+p{
+margin:0px;
+}
+</style>
   <body>
-    <div style="text-align: center;" id="preview"> </div>
+    <div style="text-align: left;" id="preview"> </div>
     <script src="markdown.js"></script>
     <script src="jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
     <script>
@@ -16,18 +44,21 @@ $(document).ready(function(){
             });
         }
 
-         $(window).bind('hashchange', function(e, triggered) {
-             var hash = location.hash.replace(/^#/, '');
+        var changepage = function()
+        {
+            var hash = location.hash.replace(/^#/, '');
             if (!hash) {
             hash = "index.md";
             }
-                //window.history.pushState(null, null, artid);
-                render(hash);
+            render(hash);
+        }
 
+         $(window).bind('hashchange', function(e, triggered)
+         {
+             changepage();
          });
 
-         render("index.md");
-         //  window.history.pushState(null, null, "");
+         changepage();
    });
     </script>
   </body>
