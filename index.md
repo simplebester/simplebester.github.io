@@ -1,4 +1,4 @@
-# remember the things
+# Remember the things
 ## life
 [car](#car.md) [film](#film.md) [passwd](#passwd.md)
 ## phone game
