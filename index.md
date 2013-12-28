@@ -1,6 +1,6 @@
 # Remember the things
 ## life
-[car](#car.md) [film](#film.md) [passwd](#passwd.md) [huawei](#huawei.md)
+[travel](#travel.md) [car](#car.md) [film](#film.md) [passwd](#passwd.md) [huawei](#huawei.md)
 ## phone game
 [cocos2d-x](#cocos2d-x.md) [cocosbuilder](#cocosbuilder.md) [cocostudio](#cocostudio.md)
 ## web app
