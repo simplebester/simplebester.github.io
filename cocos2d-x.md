@@ -1,8 +1,9 @@
 # Cocos2d-x
 ## 一、工程创建
-```
-create_project.py -project MyGame -package com.MyCompany.AwesomeGame -language javascript
-```
+使用cocos2d自带的创建工程的脚本进行工程创建：
+
+    create_project.py -project MyGame -package com.MyCompany.AwesomeGame -language javascript
+
 与cocosbuilder融合创建资源，只需目录上的一个tip，注意让两个Resource覆盖就行。
 Create folder references for any added folders
 
