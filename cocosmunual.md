@@ -26,6 +26,7 @@
 * is/pause
 * resume
 * start/stopAnimation
+* getTouchDispatcher.addTargetedDelegate
 
 ### 窗口
 * getWinSize
@@ -75,8 +76,16 @@
 * schedule/unschedule/Once/Update
 * pause/resume/SchedulerAndAction
 
+## CCRenderTexture
+继承于CCNode
+* begin
+* end
+* saveToFile
+
 ## CCScene
 继承CCNode，大小等于窗口大小
+* visit
+
 ## CCLayer
 继承CCNode，CCTouch，CCAccelerometer，CCKeyBoard
 ### 基本
@@ -95,6 +104,17 @@
 ## CCLayerMultiplex
 一般用于选项卡，构造函数输入多个layer，用如下方法进行切换switchTo。
 
+## CCRect
+* CCRectMake
+* containsPoint
+
+## CCPoint
+* ccpAdd
+* ccpSub
+
+## CCTouch
+* getPreviousLocationsView
+
 ## TableView
 一般用于构造关卡滚动界面，需要实现如下几个接口。create(parer,size),setDirection,setDelegate,reloadData,dequeueCell
 ### CCTableViewDataSource
@@ -112,10 +132,20 @@
 * set/getTexture/Rect
 * set/getSpriteFrame
 * set/getBlendFunc
+* runAction
+
+## SpriteFrame
+* createWithTexture
 
 ## SpriteFrameCache
 精灵缓冲，addSpriteFramesWithFile,spriteFrameByName
+
+## CCTextureCache
 ## Texture2D
+
+## CCSpriteBatchNode
+* batchNodeWithTexture
+* createWithTexture
 
 ## CCLabelTTF
 静态文本create("")
@@ -126,6 +156,10 @@
 * CCString转换char＊
 * objectForKey
 
+## CCArray
+* createWithCapacity
+* addObject
+
 ## CCAction
 继承于CCObject
 ### 基本
@@ -135,6 +169,9 @@
 ### CCFolow
 ### CCSpeed
 ### CCActionInstant/Interval
+### CCMoveTo
+### CCAniMation
+createWithSpriteFrames(frameArray),setLoop,setRestoreOriginalFrame
 
 ## CCMenu
 CCMenu继承于CCLayer，因此具有触摸效果，CCMenuItem继承于CCNode没有触摸效果。
@@ -144,7 +181,21 @@ CCMenu继承于CCLayer，因此具有触摸效果，CCMenuItem继承于CCNode没
 ### CCMenuItem
 * CCMenuItemFont
 * CCMenuItemImage
-
+- setNormal/Selected/SpriteFrame
     构造函数输入noraml、select态的图片，回调函数（menu_selector）
 * CCMenuItemToggle
-*
+
+## SimpleAudioEngine
+* preloadBackgroundMusic
+* preloadEffect
+* play/stop/BackgroundMusic
+* palyEffect
+
+## CCScale9Sprite
+
+## CCControlButton
+* setBackgroundSpriteForState
+* setPreferredSize
+* addTargetWithActionForControlEvents
+
+
