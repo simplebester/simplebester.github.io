@@ -2,7 +2,15 @@
 这是一个cocos2d－x的学习纪录，主要思路是通过整个架构入手，熟练使用每一个api。最终形成一个参考手册。
 整个游戏主要包含如下几类对象，无外乎排列组合而已。
 
+## 坐标系
+屏幕坐标系（UIKit）左上为原点。OpenGL坐标系左下为原点。
+绝对，相对坐标系，锚点，对一个对象相对父节点的位置。
+
 ## CCDirector
+### 工具
+* convertToGL
+* convertToUI
+
 ### 基本
 * shareDirector
 * getRunningScene
@@ -24,8 +32,6 @@
 * getWinSizeInPixels
 * getVisibleSize
 * getVisibleOrigin
-* convertToGL
-* convertToUI
 
 ### 场景
 * runWithScene
@@ -61,13 +67,13 @@
 ### 回调
 * onEnter/TansitionDidFinish
 * onExit/TansitionDidFinish
-* update
 
 ### 行为
 * set/getActionManager
 * run/stop/getAction
 * set/get/is/Scheduler
 * schedule/unschedule/Once/Update
+* pause/resume/SchedulerAndAction
 
 ## CCScene
 继承CCNode，大小等于窗口大小
@@ -97,3 +103,24 @@
 ## Texture2D
 
 ## CCAction
+继承于CCObject
+### 基本
+* startWithTarget
+* get/get/OriginalTaget
+* isDone
+### CCFolow
+### CCSpeed
+### CCActionInstant/Interval
+
+## CCMenu
+CCMenu继承于CCLayer，因此具有触摸效果，CCMenuItem继承于CCNode没有触摸效果。
+### CCMenu
+    构造函数输入菜单条目，
+* alignItem/Vertically/Horizontally/InRows/WithPadding
+### CCMenuItem
+* CCMenuItemFont
+* CCMenuItemImage
+
+    构造函数输入noraml、select态的图片，回调函数（menu_selector）
+* CCMenuItemToggle
+*
