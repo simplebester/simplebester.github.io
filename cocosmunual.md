@@ -92,6 +92,19 @@
 * didAccelerate/reg/unregScriptAccelerateHandler
 * keyBack/Menu/Clicked
 
+## CCLayerMultiplex
+一般用于选项卡，构造函数输入多个layer，用如下方法进行切换switchTo。
+
+## TableView
+一般用于构造关卡滚动界面，需要实现如下几个接口。create(parer,size),setDirection,setDelegate,reloadData,dequeueCell
+### CCTableViewDataSource
+* tableCellTouched
+* tableCellSizeForIndex
+* tableCellAtIndex
+* numberOfCellsInTableView
+
+### CCScrollViewDelegate
+
 ## CCSprit
 继承于CCNodeRGBA，CCTextureProtocol，本质上就是一个二维图片。
 ### 基本
@@ -100,7 +113,18 @@
 * set/getSpriteFrame
 * set/getBlendFunc
 
+## SpriteFrameCache
+精灵缓冲，addSpriteFramesWithFile,spriteFrameByName
 ## Texture2D
+
+## CCLabelTTF
+静态文本create("")
+
+## CCDictionary
+读取配置文件，例如国际化，
+* createWithContentsOfFile
+* CCString转换char＊
+* objectForKey
 
 ## CCAction
 继承于CCObject
