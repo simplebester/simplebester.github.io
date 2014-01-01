@@ -13,12 +13,10 @@
 
 ### 基本
 * shareDirector
-* getRunningScene
 * get/setAnimationInterval
 * is/setDisplayStats
 * getSecondes
 * set/getOpenGLView
-* isPaused
 * getTotalFrames
 
 ### 控制
@@ -36,6 +34,7 @@
 
 ### 场景
 * runWithScene
+* getRunningScene
 * pushScene
 * popScene
 * popToRootScene
