@@ -177,7 +177,7 @@ CCMenu继承于CCLayer，因此具有触摸效果，CCMenuItem继承于CCNode没
 ### CCMenu
     构造函数输入菜单条目，
 * alignItem/Vertically/Horizontally/InRows/WithPadding
-### CCMenuItem
+###     CCMenuItem
 * CCMenuItemFont
 * CCMenuItemImage
 - setNormal/Selected/SpriteFrame
